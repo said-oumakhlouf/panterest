@@ -12,3 +12,8 @@ import './styles/app.scss';
 // start the Stimulus application
 import $ from 'jquery';
 import 'bootstrap';
+
+$('.custom-file-input').on('change', function(e){
+    let inputfile = e.currentTarget;
+    $(inputfile).parent().find('.custom-file-label').html(inputfile.files[0].name);
+});
